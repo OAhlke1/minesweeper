@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/minesweeper/images/mine.png">
+</head>
+<body onload="addEventListeners()">
+    <div class="shield disNone">
+        <button onclick="continueGame()">Continue Game</button>
+    </div>
+    <div class="inputs">
+        <div class="label-input">
+            <label for="fieldsInWidth">Set amount of fields in a row</label>
+            <input type="number" id="fieldsInWidth" placeholder="mines in row" value="5">
+        </div>
+        <div class="label-input">
+            <label for="fieldsInHeight">Set amount of fields in a column</label>
+            <input type="number" id="fieldsInHeight" placeholder="mines in column" value="5">
+        </div>
+        <div class="label-input">
+            <label for="amountOfMines">Amount of mines</label>
+            <input type="number" id="amountOfMines" value="10">
+        </div>
+    </div>
+    <button onclick="createFields()">Create Game</button>
+    <button onclick="pauseGame()" class="pause-game disNone">Pause Game</button>
+    <div class="timer" stopped>
+        <p>0.00 sec</p>
+    </div>
+    <div class="playground"></div>
+</body>
+<script src="game.js"></script>
+</html>

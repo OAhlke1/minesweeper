@@ -1,0 +1,180 @@
+* {
+    font-family: sans-serif;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.shield {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 50;
+}
+
+.disNone {
+    display: none !important;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    width: 100vw;
+    height: 50%;
+    margin: 20px auto 0 auto;
+}
+
+.inputs .label-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    width: 25%;
+    max-width: 320px;
+}
+
+.inputs .label-input label {
+    font-size: 15px;
+}
+
+.inputs input {
+    width: 80vw;
+    max-width: 200px;
+    height: 100%;
+}
+
+.timer {
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.timer p {
+    width: fit-content;
+    font-size: 24px;
+    color: black;
+    margin: 0;
+}
+
+.playground {
+    width: 90vw;
+    max-width: 600px;
+    height: 90vw;
+    margin: 0 auto;
+    position: relative;
+}
+
+.playground .field, .playground .shell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    position: absolute;
+    border: 1px solid black;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    background-image: none;
+}
+
+.playground .field {
+    z-index: 1;
+}
+
+.playground .shell {
+    z-index: 2;
+}
+
+.playground .field[hasMine] {
+    background-image: url('/minesweeper/images/mine.png');
+}
+
+.playground .shell[flagged] {
+    background-image: url('/minesweeper/images/flag.png');
+}
+
+.playground .field[hasMine], .playground .shell[flagged] {
+    background-size: 75% 75%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.playground .field p {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 1.25em;
+}
+
+.playground .field[hasmine] p {
+    display: none;
+}
+
+.playground .field p[neighboured-mine-amount="0"] {
+    color: white;
+}
+
+.playground .field p[neighboured-mine-amount="1"] {
+    color: blue;
+}
+
+.playground .field p[neighboured-mine-amount="2"] {
+    color: green;
+}
+
+.playground .field p[neighboured-mine-amount="3"] {
+    color: red;
+}
+
+.playground .field p[neighboured-mine-amount="4"] {
+    color: darkblue;
+}
+
+.playground .field p[neighboured-mine-amount="5"] {
+    color: brown;
+}
+
+.playground .field p[neighboured-mine-amount="6"] {
+    color: turquoise;
+}
+
+.playground .field p[neighboured-mine-amount="7"] {
+    color: black;
+}
+
+.playground .field p[neighboured-mine-amount="8"] {
+    color: pink;
+}
+
+@media only screen and (max-width: 600px) {
+    .inputs {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    .inputs .label-input {
+        width: 100%;
+    }
+
+    button {
+        align-self: center;
+    }
+
+    .playground .field p {
+        font-size: 20px;
+    }
+}
