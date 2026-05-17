@@ -1,7 +1,7 @@
 # Minesweeper
 
 Minesweeper - the game-classic in which you have to click the tiles in hopes of not getting a mine.
-
+[link:](https://oscar-ahlke.de/games/minesweeper/)
 ## Authors
 
 - Oscar Ahlke [@OAhlke1](https://www.github.com/OAhlke1)
