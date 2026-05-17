@@ -101,11 +101,11 @@ body {
 }
 
 .playground .field[hasMine] {
-    background-image: url('/minesweeper/images/mine.png');
+    background-image: url('./images/mine.png');
 }
 
 .playground .shell[flagged] {
-    background-image: url('/minesweeper/images/flag.png');
+    background-image: url('./images/flag.png');
 }
 
 .playground .field[hasMine], .playground .shell[flagged] {
