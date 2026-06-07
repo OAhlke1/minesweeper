@@ -22,3 +22,8 @@ I'm a frontend developer from Germany specializing in HTML, CSS, JavaScript, Ang
 My other links:
 - [portfolio](https://oscar-ahlke.de)
 - [linkedin](https://de.linkedin.com/in/oscar-ahlke-949a64320)
+
+
+## Screenshot
+
+![App Screenshot](https://oscar-ahlke.de/games/minesweeper/screenshot.webp)
